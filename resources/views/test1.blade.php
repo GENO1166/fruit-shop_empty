@@ -11,7 +11,10 @@
     <h1>Test1</h1>
 
     <label class="form-label">กรอกข้อมูล</label>
-    <form action="{{ route('test2') }}" method="GET">
+
+    <form action="{{ route('test2') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+
         <label>ชื่อสินค้า</label>
         <input type="text" name="name">
 
@@ -21,10 +24,11 @@
         <label>รายละเอียด</label>
         <input type="text" name="detail">
 
+        <label>รูปภาพ</label>
+        <input type="file" name="image">
+
         <button type="submit">ส่งค่า</button>
     </form>
-
-
 </body>
 
 </html>

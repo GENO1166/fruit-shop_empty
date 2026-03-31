@@ -22,6 +22,14 @@ class HomeController extends Controller
         $price = $request->price;
         $detail = $request->detail;
 
-        return view('test2', compact('name', 'price', 'detail'));
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            
+            $image->storeAs('test_images', $imageName, 'public');
+        }
+
+        return view('test2', compact('name', 'price', 'detail', 'imageName'));
     }
 }

@@ -9,7 +9,7 @@ use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/test', [HomeController::class, 'test1_page'])->name('test1');
-Route::get('/test/show', [HomeController::class, 'test2_page'])->name('test2');
+Route::post('/test/show', [HomeController::class, 'test2_page'])->name('test2');
 
 
 

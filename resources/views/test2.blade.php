@@ -14,6 +14,7 @@
     <p>ชื่อสินค้า: {{ $name }}</p>
     <p>ราคา: {{ $price }}</p>
     <p>รายละเอียด: {{ $detail }}</p>
+    <p>รูปภาพ: <img src="{{ asset('public/storage/test_images/' . $imageName) }}"></p>
 
 </body>
 
