@@ -208,7 +208,6 @@
             <h2>จัดการรายการผลไม้</h2>
             
             <div class="header-actions">
-                @if ($user_role->role !== 'user')
                     <a href="#" target="_blank" class="btn-report">
                         ออกรายงาน (PDF)
                     </a>
@@ -216,7 +215,7 @@
                     <a href="#" class="btn-add">
                         + เพิ่มผลไม้ใหม่
                     </a>
-                @endif
+
             </div>
         </div>
 

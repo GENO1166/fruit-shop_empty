@@ -176,7 +176,7 @@
 </style>
 
 <nav class="navbar-custom">
-    <a href="{{ route('homepage') }}" class="nav-logo">
+    <a href="#" class="nav-logo">
         <i class="bi bi-basket-fill"></i> Fresh<span>Fruit</span>
     </a>
 
@@ -193,27 +193,27 @@
                 @endif
             </a>
             @else
-            <a href="{{ route('login') }}" class="cart-icon">
+            <a href="#" class="cart-icon">
                 <i class="bi bi-cart3"></i>
             @endif
         </div>
         
-        <a href="{{ route('homepage') }}" class="nav-item {{ request()->routeIs('homepage') ? 'active' : '' }}">
+        <a href="#" class="nav-item {{ request()->routeIs('homepage') ? 'active' : '' }}">
             หน้าแรก
         </a>
 
-        <a href="{{ route('products_list') }}"
+        <a href="#"
             class="nav-item {{ request()->routeIs('products_list') ? 'active' : '' }}">
             รายการสินค้า
         </a>
 
         @if (Auth::check() && Auth::user()->role !== 'user')
-            <a href="{{ route('products_manage') }}"
+            <a href="#"
                 class="nav-item {{ request()->routeIs('products_manage') ? 'active' : '' }}">
                 จัดการสินค้า
             </a>
 
-            <a href="{{ route('user_manage') }}"
+            <a href="#"
                 class="nav-item {{ request()->routeIs('user_manage') ? 'active' : '' }}">
                 จัดการผู้ใช้งาน
             </a>
@@ -226,21 +226,21 @@
                     {{ Auth::user()->first_name }} <small>▼</small>
                 </div>
                 <div class="dropdown-content">
-                    <a href="{{ route('profile_edit', Auth::id()) }}"><i class="bi bi-person"></i> ข้อมูลส่วนตัว</a>
+                    <a href="#"><i class="bi bi-person"></i> ข้อมูลส่วนตัว</a>
 
-                    <a href="{{ route('logout') }}"
+                    <a href="#"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                         style="color: #e74c3c; border-top: 1px solid #ffeaea;">
                         <i class="bi bi-box-arrow-right"></i> ออกจากระบบ
                     </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" action="#" method="POST" style="display: none;">
                         @csrf
                     </form>
                 </div>
             </div>
         @else
-            <a href="{{ route('login') }}" class="nav-item login-btn-custom">
+            <a href="#" class="nav-item login-btn-custom">
                 เข้าสู่ระบบ
             </a>
         @endif
