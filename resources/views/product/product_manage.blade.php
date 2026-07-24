@@ -235,6 +235,7 @@
                         <td>#</td>
                         <td>
                             <div style="display: flex; align-items: center;">
+                                <div class="fruit-icon">🍏</div>
                                 <div>
                                     <div style="font-weight: 600;"></div>
                                     <div style="font-size: 12px; color: #777;">
